@@ -4,7 +4,6 @@ class StatusesController < ApplicationController
   # GET /statuses
   # GET /statuses.json
   def index
-    puts "aqui vas"
     @statuses = Status.all
   end
 

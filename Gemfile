@@ -7,6 +7,8 @@ gem 'rails', '4.1.8'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'devise'
+gem 'protected_attributes'
+gem 'simple_form'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

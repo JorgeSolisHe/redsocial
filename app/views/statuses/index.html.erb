@@ -1,9 +1,9 @@
 <div class="page-header">
   <h1>Todos los estados</h1>
 </div>
+<%= link_to "+ add post", new_status_path, class: "btn btn-success" %>
 <% @statuses.each do |status| %>
 <div class="statuses">
-  <strong><%= status.nombre %></strong>
   <p><%= status.contenido %></p>
   <div>
     <%= link_to "Se creo hace "+ time_ago_in_words(status.created_at), status  %>
