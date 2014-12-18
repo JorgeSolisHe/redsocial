@@ -10,9 +10,19 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<a href="#" class="navbar-brand">Red Social</a>
+
 			<ul class="nav navbar-nav">
         		<li class="active"><%= link_to "Status", statuses_path %></li>
-        	</ul>
+      </ul>
+      <ul class="nav navbar-nav pull-right">}
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.nombre_completo, edit_user_registration_path %></li>
+          <li><%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Registrar", new_user_registration_path %></li>
+          <li><%= link_to "Iniciar Sesión", new_user_session_path%></li>
+        <% end  %>
+      </ul>
 		</div>
 	</div>
 <div class="container">
